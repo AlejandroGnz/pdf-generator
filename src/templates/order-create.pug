@@ -1,0 +1,32 @@
+doctype html
+head
+  title Pug
+  link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css")
+.d-flex.flex-row.justify-content-end
+  .px-md-5.bg-danger
+    h2.text-light
+      | Invoice
+.py-md-3.customer-data
+  bold
+    | Customer: #{customer.name}
+  br
+  bold Email: #{customer.email}
+  br
+  bold NIT: #{customer.document}
+
+table.table.table-bordered
+  thead.thead-light
+    tr
+      th Name
+      th Price
+      th Quantity
+      th Total
+  tbody
+    each product in items
+      tr
+        td aguacate
+        td 3000
+        td 20
+        td 60000
+.container
+  .bg-primary.footer-label
